@@ -1,0 +1,228 @@
+@import (reference) "webapp/handlebars/common/bower_components/ttcom-theme/less/mixins";
+@import (reference) "webapp/handlebars/common/bower_components/ttcom-theme/less/lesshat";
+@import (reference) "webapp/handlebars/common/bower_components/turbodings/dist/TurboDings/TurboDings";
+@import (reference) "webapp/handlebars/common/bower_components/ttcom-theme/less/variables";
+@import (reference) "webapp/handlebars/common/bower_components/ttcom-theme/less/buttons";
+@import (less) "webapp/handlebars/common/bower_components/lesshat/build/lesshat";
+@import (less) "webapp/handlebars/common/bower_components/bootstrap/less/mixins";
+@import (less) "webapp/handlebars/campaign/dynamic-lp/less/campaign-variables";
+
+.affm {
+
+  &-hero {
+    background-image: url("/handlebars/campaign/_common/heroes/affm/images/affm-hero-xsp.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: transparent;
+    height: 412px;
+
+    @media only screen
+    and (min-device-width: @xsl-min-width)
+    and (max-device-width: @xsl-max-width)
+    and (orientation: landscape) {
+      background-image: url("/handlebars/campaign/_common/heroes/affm/images/affm-hero-xsl.jpg");
+      height: 270px;
+    }
+    @media only screen and (min-width: @screen-sm-min) {
+      background-image: url("/handlebars/campaign/_common/heroes/affm/images/affm-hero-sm.jpg");
+      height: 350px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      background-image: url("/handlebars/campaign/_common/heroes/affm/images/affm-hero-md.jpg");
+      height: 450px;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      background-image: url("/handlebars/campaign/_common/heroes/affm/images/affm-hero-lg.jpg");
+      height: 450px;
+    }
+  }
+  &-hero .content-container {
+    text-align: center;
+    padding: 0 30px;
+
+    @media only screen
+    and (min-device-width: @xsl-min-width)
+    and (max-device-width: @xsl-max-width)
+    and (orientation: landscape) {
+      text-align: left;
+      margin-left: 10px;
+    }
+    @media only screen and (min-width: @screen-sm-min) {
+      text-align: left;
+      margin-left: 10px;
+    }
+  }
+  &-hero .content-container .headline-responsive {
+    color: #333;
+    margin-top: 13px;
+
+    @media only screen
+    and (min-device-width: @xsl-min-width)
+    and (max-device-width: @xsl-max-width)
+    and (orientation: landscape) {
+      padding-top: 14px;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      padding-top: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  &-hero .content-container p {
+    color: #333;
+    padding-bottom: 4px;
+
+    @media only screen
+    and (min-device-width: @xsl-min-width)
+    and (max-device-width: @xsl-max-width)
+    and (orientation: landscape) {
+      width: 58%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    @media only screen and (min-width: @screen-sm-min) {
+      width: 44%;
+      float: none;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      width: 34%;
+      padding-bottom: 20px;
+    }
+  }
+  &-hero .content-container .btn-container {
+    @media only screen and (min-width: @screen-sm-min) {
+      width: 25%;
+      margin-left: 0;
+      margin-top: 16px;
+    }
+    @media only screen and (min-width: @screen-md-min) {
+      display: none;
+    }
+  }
+  &-hero .content-container .button-wrap {
+    @media only screen and (min-width: @screen-sm-min) {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+  &-hero .content-container .btn-responsive {
+    border: none;
+
+    @media only screen and (min-width: @screen-sm-min) {
+      width: 100%;
+    }
+  }
+  &-hero .content-container .btn-m-red {
+    background-color: #cc3335
+  }
+
+  &-hero .cta-container {
+    display: none;
+    @media only screen and (min-width: @screen-md-min) {
+      display: block;
+    }
+  }
+  &-hero .cta-container .button-delim {
+    display: none;
+    color: #333;
+    position: relative;
+    text-align: center;
+    bottom: -20px;
+    &:before, &:after {
+      content: '|';
+      color: #d6d6d6;
+      display: block;
+      font-size: 13px;
+      font-weight: 100;
+    }
+    @media (min-width: @screen-sm) {
+      display: inline-block;
+      margin: 0 14px;
+    }
+  }
+  &-hero .cta-container .button-wrap {
+    display: inline-block;
+    width: auto !important;
+  }
+  &-hero .app-container {
+    display: none;
+    @media only screen and (min-width: @screen-md-min) {
+      display: block;
+      margin-top: 60px;
+    }
+    @media only screen and (min-width: @screen-lg-min) {
+      margin-top: 40px;
+    }
+  }
+  &-hero .app-container .kicker,
+  &-hero .app-container .kicker > img,
+  &-hero .app-container .kicker > p,
+
+  &-hero .app-container .kicker {
+    margin-right: 24px;
+  }
+  &-hero .app-container .kicker > p {
+    width: auto;
+  }
+
+  &-hero .app-container .app-ctas > a {
+    margin-right: 3px;
+  }
+
+  .app-ctas {
+    margin-top: -25x;
+  }
+
+  .cta-container {
+    margin-top: -30px;
+  }
+
+  .app-container {
+    margin-top: 10px;
+  }
+
+  .body-copy-2 > p {
+    display: inline-block;
+    text-align: left;
+    margin-left: -20px;
+  }
+
+}
+
+
+.affm-fixed-container {
+  height: 68px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -4px 5px -2px #999;
+  -moz-box-shadow: 0px -4px 5px -2px #999;
+  box-shadow: 0px -4px 5px -2px #999;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+
+  @media only screen and (min-width: @screen-sm-min) {
+    display: none;
+  }
+
+  .btn-container {
+    text-align: center;
+    padding: 14px;
+  }
+  .btn-container > .button-wrap {
+    display: inline-block;
+    width: 47%;
+
+  }
+  .btn-container > .button-wrap.left {
+    margin-right: 3px;
+  }
+  .btn-container > .button-wrap.right {
+    margin-left: 3px;
+  }
+  .btn-container > .button-wrap > a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "file-mapper",
+  "version": "1.0.1",
+  "description": "Map directory file structure into a JSON file",
+  "license": "ISC",
+  "author": "Amir Mirshekari",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "bump": "npm version patch && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.intuit.com/TTcom/file-mapper.git"
+  },
+  "bugs": {
+    "url": "https://github.intuit.com/TTcom/file-mapper/issues"
+  },
+  "keywords": [
+    "map",
+    "directory",
+    "file",
+    "structure"
+  ],
+  "devDependencies": {
+    "chai": ">=3.5.0",
+    "mocha": ">=3.3.0"
+  }
+}

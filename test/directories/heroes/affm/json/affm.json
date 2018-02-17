@@ -1,0 +1,7 @@
+{
+    "url": {
+        "ios": "https://control.kochava.com/v1/cpi/click?campaign_id=koturbotax-ios-intuit-bb9sm7ddf86f62a782&amp;network_id=5401&amp;device_id=device_id&amp;site_id=1",
+        "android": "https://control.kochava.com/v1/cpi/click?campaign_id=koturbotax-android-intuit-4t7zxrp3ad280f996f11&network_id=5401&amp;device_id=device_id&amp;site_id=1&amp;append_app_conv_trk_params=1",
+        "smart_link": "https://smart.link/5866995488824"
+    }
+}

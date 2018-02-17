@@ -1,0 +1,20 @@
+{
+    "affm": {
+        "headline1": "Get your taxes",
+        "headline2": "done right, ",
+        "headline3": "guaranteed",
+        "subhead": "Seamlessly switch between your phone, tablet and computer",
+        "links": {
+            "app": "Get the Free App",
+            "start": "Start for Free",
+            "sign": "Sign In"
+        },
+        "or": "or",
+        "kicker":"Download the TurboTax app for FREE now",
+        "alt": {
+            "turbotax": "Intuit TurboTax icon",
+            "appstore": "Download on the AppStore",
+            "google": "Get it on Google play"
+        }
+    }
+}

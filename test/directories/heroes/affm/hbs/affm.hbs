@@ -1,0 +1,75 @@
+{{!-- i18n --}}
+{{#assign "i18n-affm-bundle"}}i18n.affm{{/assign}}
+
+{{stylesheet "/handlebars/campaign/_common/heroes/affm/less/affm.less"}}
+
+{{#assign "_cid"}}{{param "cid"}}{{/assign}}
+{{#assign "_srid"}}{{param "srid"}}{{/assign}}
+
+{{#assign "signin-text"}}{{i18n "affm.links.sign" bundle=i18n-affm-bundle locale=locale }}{{/assign}}
+
+{{!-- app store link setup --}}
+{{#assign "store-config-url"}}/handlebars/campaign/_common/heroes/affm/json/affm.json{{/assign}}
+{{json-data name="store-config" file=store-config-url}}
+
+{{#ttpartial "hero.content"}}
+    <section class="affm" data-com-id="com-hero-affm" data-auto-sel="affm">
+        <div class="affm-hero hero row">
+            <div class="content-container col-xs-12">
+                <h2 class="heading-1 headline-responsive">{{i18n "affm.headline1" bundle=i18n-affm-bundle locale=locale}} <span class="heading-2"><br />{{i18n "affm.headline2" bundle=i18n-affm-bundle locale=locale}} <a class="link-copy-1 beacon-this" data-toggle="modal" href="/modals/guarantees/" data-target="#guarantees">{{i18n "affm.headline3" bundle=i18n-affm-bundle locale=locale}}</a></span></h2>
+                <p class="sub-heading-1">{{i18n "affm.subhead" bundle=i18n-affm-bundle locale=locale}}</p>
+
+                {{!-- mobile buttons --}}
+                <div class="btn-container">
+                    <div class="button-wrap visible-sm visible-md visible-lg">
+                        <a class="btn btn-responsive btn-blue beacon-this" href="/personal-taxes/online/">{{i18n "affm.links.start" bundle=i18n-affm-bundle locale=locale}}</a>
+                    </div>
+                    <div class="button-wrap visible-sm visible-md visible-lg">
+                        {{signInButton class="btn-orange" button-text=signin-text}}
+                    </div>
+                    <div class="button-wrap">
+                        <a class="btn btn-responsive btn-orange btn-m-red beacon-this" href="{{{store-config.url.smart_link}}}?sub_campaign={{_srid}}&sub_adgroup={{_cid}}" >{{i18n "affm.links.app" bundle=i18n-affm-bundle locale=androilocale}}</a>
+                    </div>
+                </div>{{!-- /btn-container --}}
+
+                {{!-- >= 992px buttons --}}
+                <div class="cta-container">
+                    <div class="button-wrap first">
+                        <a class="btn btn-responsive btn-blue beacon-this" href="/personal-taxes/online/">{{i18n "affm.links.start" bundle=i18n-affm-bundle locale=locale }}</a>
+                    </div>
+                    <div class="button-delim">{{i18n "affm.or" bundle=i18n-affm-bundle locale=locale }}</div>
+                    <div class="button-wrap">
+                        {{signInButton class="btn-orange beacon-this" button-text=signin-text}}
+                    </div>
+                </div>{{!-- /cta-container --}}
+                <div class="app-container">
+                    <div class="kicker body-copy-2">
+                        <img src="/handlebars/campaign/_common/heroes/affm/images/affm-turbotax-badge.jpg" alt="{{i18n "affm.alt.turbotax" bundle=i18n-affm-bundle locale=locale}}" width="42" height="33" />
+                        <p>{{i18n "affm.kicker" bundle=i18n-affm-bundle locale=locale}}</p>
+                    </div>
+                    <div class="app-ctas">
+                        <a href="{{{store-config.url.ios}}}&sub_campaign={{_srid}}&sub_adgroup={{_cid}}" target="_blank">
+                            <img src="/handlebars/campaign/_common/heroes/affm/images/affm-appstore-badge.jpg" alt="{{i18n "affm.alt.appstore" bundle=i18n-affm-bundle locale=locale}}" width="154" height="45" /></a>
+                        <a href="{{{store-config.url.android}}}&sub_campaign={{_srid}}&sub_adgroup={{_cid}}" target="_blank">
+                            <img src="/handlebars/campaign/_common/heroes/affm/images/affm-googleplay-badge.jpg" alt="{{i18n "affm.alt.google" bundle=i18n-affm-bundle locale=locale}}" width="154" height="45" /></a>
+
+
+                    </div>
+                </div>{{!-- /app-container --}}
+            </div>{{!-- /content-container --}}
+        </div>{{!-- /affm-hero --}}
+    </section>{{!-- /affm --}}
+
+    {{!--Fixed CTAs--}}
+    <section class="affm-fixed-container row">
+        <div class="btn-container">
+            <div class="button-wrap left">
+                <a class="btn btn-responsive btn-blue beacon-this" href="/personal-taxes/online/">{{i18n "affm.links.start" bundle=i18n-affm-bundle locale=locale}}</a>
+            </div>
+            <div class="button-wrap right">
+                {{signInButton class="btn-orange beacon-this" button-text=signin-text}}
+            </div>
+        </div>{{!-- /btn-container --}}
+    </section>{{!-- /fixed-container --}}
+
+{{/ttpartial}}

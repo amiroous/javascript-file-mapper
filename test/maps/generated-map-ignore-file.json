@@ -1,0 +1,1 @@
+[{"name":"folder-to-ignore","type":"directory","children":[{"name":"file-not-to-ignore","extension":".txt","type":"file"}]}]
